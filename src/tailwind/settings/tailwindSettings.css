@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-Montserrat;
+  }
+}
+
+@layer components {
+  .titulo-1 {
+    @apply text-[2.5rem] text-primaryColor_2 font-semibold
+  }
+
+  .titulo-2 {
+    @apply text-[1.5625rem] text-primaryColor_2 font-semibold
+  }
+
+  .menu-item.active {
+    @apply text-fuchsia-500
+  }
+
+  .menu-item {
+    @apply hover:text-fuchsia-500;
+  }
+
+  .nav-item {
+    @apply text-left hover:border-b-2 hover:border-fuchsia-500 pb-2 cursor-pointer
+  }
+
+  .nav-item.active {
+    @apply border-b-2 border-fuchsia-500
+  }
+}
+
+
+
+
+
+
+
