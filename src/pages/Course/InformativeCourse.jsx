@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import API from '../../lib/axios.jsx';
 import { Clock, Users, CalendarCheck } from 'phosphor-react';
 import StarRating from '../../components/StarRating/StarRating.jsx';
@@ -26,11 +26,11 @@ const InformativeCourse = () => {
         style={{ backgroundImage: `url(${capaURL})` }}
         className="w-full bg-cover bg-center bg-blend-multiply bg-primaryColor_2"
       >
-        <div className="w-full max-w-[69.375rem] mx-auto / 1200:w-[95%]">
+        <div className="w-full max-w-[69.375rem] mx-auto / 1200:w-[85%]">
           <nav className="mt-[1.875rem] text-[#E0E0E0] text-[1rem] font-semibold">
-            <Link to="/">Início</Link>
-            <Link to="/cursos">/ Cursos</Link>
-            <Link to="/cursos">/ Módulos</Link>
+            <Link to="/">Início </Link>
+            <Link to="/cursos">/ Cursos </Link>
+            <Link to="/cursos">/ Módulos </Link>
             <Link
               to={`/cursos/${curso?.id}`}
               className="font-bold text-white"
@@ -44,7 +44,7 @@ const InformativeCourse = () => {
           </h2>
         </div>
       </section>
-      <section className="w-[100%] max-w-[69.375rem] grid mx-auto / 1200:w-[95%]">
+      <section className="w-full max-w-[69.375rem] grid mx-auto / 1200:w-[85%]">
         <h1 className="place-self-center text-[2.5rem] text-primaryColor_2 mt-[1.875rem] / 1200:text-center">
           Informações Gerais do Curso
         </h1>
@@ -87,13 +87,13 @@ const InformativeCourse = () => {
           </div>
         </div>
       </section>
-      <section className="w-[95%] max-w-[69.375rem] grid mx-auto">
+      <section className="w-full max-w-[69.375rem] grid mx-auto / 1200:w-[85%]">
         <h2 className="mt-[2.875rem] text-primaryColor_2 font-semibold text-[1.5625rem] justify-self-center">
           Sobre o curso
         </h2>
         <p className="mt-[1.875rem] text-justify text-[1rem]">{curso?.sobre}</p>
       </section>
-      <section className="w-[95%] max-w-[69.375rem] grid mx-auto">
+      <section className="w-full max-w-[69.375rem] grid mx-auto / 1200:w-[85%]">
         {(curso?.objetivo_geral != undefined) |
         (curso?.objetivo_especifico != undefined) ? (
           <h2 className="my-[1.875rem] text-primaryColor_2 font-semibold text-[1.5625rem] justify-self-center">
@@ -116,13 +116,13 @@ const InformativeCourse = () => {
                 .replace('-', '')
                 .split('-')
                 .map((line) => (
-                  <li className="mx-[2rem]">{line}</li>
+                  <li className="mx-[2rem] text-justify">{line}</li>
                 ))}
             </ul>
           </div>
         )}
       </section>
-      <section className="w-[95%] max-w-[69.375rem] grid mx-auto">
+      <section className="w-full max-w-[69.375rem] grid mx-auto / 1200:w-[85%]">
         <h2 className="font-semibold mt-[1.875rem] text-primaryColor_2 text-[1.5625rem] justify-self-center">
           Recursos educacionais
         </h2>
@@ -132,7 +132,7 @@ const InformativeCourse = () => {
             : 'Este módulo não apresenta nenhum recurso educacional.'}
         </p>
       </section>
-      <section className="w-[95%] max-w-[69.375rem] grid mx-auto">
+      <section className="w-[full] max-w-[69.375rem] grid mx-auto / 1200:w-[85%]">
         <h2 className="font-semibold mt-[1.875rem] text-primaryColor_2 text-[1.5625rem] justify-self-center">
           Créditos
         </h2>

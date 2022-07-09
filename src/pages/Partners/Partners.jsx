@@ -35,10 +35,10 @@ const Partners = () => {
 
   return (
     <main>
-      <section className="w-[95%] max-w-[69.375rem] grid mx-auto">
+      <section className="w-[100%] max-w-[69.375rem] grid mx-auto / 1200:w-[80%]">
         <nav className="mt-[1.875rem]">
           <Link to="/" className="text-[#808080] text-[1rem] font-semibold">
-            Início
+            Início{' '}
           </Link>
           <Link
             to="/parceiros"
@@ -53,7 +53,7 @@ const Partners = () => {
         <span className="text-[1rem] italic mt-[2rem]">
           {offset} de {qtdTotal} resultados
         </span>
-        <div className="grid grid-cols-3 gap-[2rem] mt-[1.875rem] / 1200:grid-cols-2 / tablet:grid-cols-1 tablet:max-w-[80%] tablet:mx-auto">
+        <div className="grid grid-cols-3 gap-[2rem] mt-[1.875rem] / 1200:grid-cols-2 / tablet:grid-cols-1 tablet:mx-auto">
           {parceiros.map((parceiro) => (
             <div className="flex flex-col">
               <img
@@ -94,6 +94,7 @@ const Partners = () => {
                   return null;
                 }
                 setPage(page - 1);
+                window.scrollTo(0, 0);
               }}
             >
               anterior
@@ -110,6 +111,7 @@ const Partners = () => {
                   return null;
                 }
                 setPage(page + 1);
+                window.scrollTo(0, 0);
               }}
             >
               próxima

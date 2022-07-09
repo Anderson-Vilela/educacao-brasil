@@ -11,7 +11,7 @@ const Home = () => {
   const [cursos, setCursos] = React.useState([]);
 
   React.useEffect(() => {
-    async function carregarCursos() {
+    const carregarCursos = () => {
       if (filtro === 'mais_populares') {
         const { data } = await API.get(
           '/cursos?_limit=3&_sort=matriculados&_order=desc',
@@ -36,16 +36,16 @@ const Home = () => {
   return (
     <main>
       <section className="w-full flex flex-col items-center bg-backgroundColor_1">
-        <h1 className="text-[3.75rem] text-primaryColor_2 font-semibold mt-[5.62rem] text-center / phone:text-[2.5rem]">
+        <h1 className="text-[3.75rem] px-[1rem] text-primaryColor_2 font-semibold mt-[5.62rem] text-center / phone:text-[2.5rem]">
           Especialização PEPSUS
         </h1>
-        <h2 className="font-semibold text-[1.87rem] text-center / phone:text-[2rem]">
+        <h2 className="font-semibold px-[1rem] text-[1.87rem] text-center / phone:text-[2rem]">
           Conheça o curso de Especialização em Saúde da Família
         </h2>
         <button className=" w-[12.5rem] h-[3.12rem] mt-[1.87rem] bg-primaryColor_1 rounded-3xl text-white text-[1.87rem]">
           <Link to="/cursos/1">Acesse</Link>
         </button>
-        <div className="w-full max-w-[69.81rem] h-full max-h-[26.5rem] relative mt-[3.12rem]">
+        <div className="w-full px-[5rem] max-w-[69.81rem] h-full max-h-[26.5rem] relative mt-[3.12rem]">
           <img src={backgroundImage} className="w-full h-full" />
           <a href="#">
             <CaretRight
@@ -105,6 +105,7 @@ const Home = () => {
         <div className="grid grid-cols-1 gap-[1.875rem] my-[1.5rem] / 1200:grid-cols-3 / laptop:grid-cols-2 / tablet:grid-cols-1 tablet:max-w-[32.5rem] tablet:mx-auto">
           {cursos.map((curso, index) => (
             <div
+              key={curso.id}
               className={`bg-[#F5F5F7] p-[1.25rem] rounded-[1.25rem] flex items-center gap-[1rem] 1200:flex-col 1200:text-center ${
                 index === 2
                   ? 'laptop:col-span-full laptop:max-w-[48.455%] laptop:mx-auto / tablet:max-w-[32.5rem]'

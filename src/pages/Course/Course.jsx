@@ -60,8 +60,8 @@ const Course = () => {
     <main>
       <div className="flex flex-col flex-wrap w-[95%] max-w-[69.375rem] mx-auto">
         <nav className="flex text-[1rem] gap-1 mt-[1.875rem]">
-          <Link to="/">Início</Link>
-          <Link to="/cursos">/ Cursos</Link>
+          <Link to="/">Início </Link>
+          <Link to="/cursos">/ Cursos </Link>
           <Link to="/cursos" className="font-bold">
             / Módulos
           </Link>

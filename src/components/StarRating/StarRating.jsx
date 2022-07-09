@@ -8,7 +8,7 @@ const StarRating = ({ qtdAvaliacoes }) => {
   }
 
   return (
-    <>
+    <div className="flex gap-[0.5rem] my-[1rem] / tablet:my-0">
       {numeroAvaliacoes >= 0.5 && numeroAvaliacoes < 1 ? (
         <StarHalf size={20} weight="fill" className="text-primaryColor_2" />
       ) : (
@@ -58,7 +58,7 @@ const StarRating = ({ qtdAvaliacoes }) => {
           weight={numeroAvaliacoes == 5 ? 'fill' : 'regular'}
         />
       )}
-    </>
+    </div>
   );
 };
 

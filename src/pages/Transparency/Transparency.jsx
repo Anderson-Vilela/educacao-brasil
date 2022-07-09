@@ -116,10 +116,10 @@ function Transparency() {
   }, []);
 
   return (
-    <main className="w-[95%] max-w-[69.375rem] mx-auto mt-[1.875rem]">
+    <main className="w-[100%] max-w-[69.375rem] mx-auto mt-[1.875rem] / 1200:w-[80%]">
       <nav>
         <Link to="/" className="text-[#808080] text-[1rem] font-semibold">
-          Início
+          Início{' '}
         </Link>
         <Link to="/transparencia" className="text-[1rem] font-bold">
           / Transparência
@@ -133,7 +133,7 @@ function Transparency() {
           <h2 className="mt-[1.875rem] text-center text-[1.5625rem] font-semibold text-primaryColor_2">
             Dados Gerais
           </h2>
-          <div className="grid grid-cols-4 justify-between gap-[1rem] px-[1rem] mt-[1.875rem]">
+          <div className="grid grid-cols-4 justify-between gap-[1rem] px-[1rem] mt-[1.875rem] / 1200:grid-cols-2 / tablet:grid-cols-1">
             <div className="grid place-items-center">
               <div className="flex gap-[0.61125rem] items-center">
                 <Users
@@ -187,7 +187,7 @@ function Transparency() {
               </span>
             </div>
           </div>
-          <div className="flex justify-center gap-[2.4375rem] mt-[1.875rem] mb-[2.8125rem]">
+          <div className="flex justify-center gap-[2.4375rem] mt-[1.875rem] mb-[2.8125rem] / tablet:flex-col">
             <div className="grid place-items-center">
               <div className="flex gap-[0.61125rem] items-center">
                 <Money
@@ -216,7 +216,7 @@ function Transparency() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-[1.875rem] mt-[1.875rem] mb-[6.25rem]">
+        <div className="grid grid-cols-2 gap-[1.875rem] mt-[1.875rem] mb-[6.25rem] / 1200:grid-cols-1">
           <div className="flex flex-col items-center justify-content rounded-2xl bg-gray-100 p-4 drop-shadow-md">
             <h1 className="text-xl text-primaryColor_2 mb-4 font-semibold text-center">
               Usuários por curso

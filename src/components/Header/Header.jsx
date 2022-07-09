@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import book from '../../assets/images/book.png';
 import { MagnifyingGlass } from 'phosphor-react';
 
 const Header = () => {
   const { pathname } = useLocation();
+  const [searchParams] = useSearchParams();
+  console.log(searchParams.id);
 
   return (
     <header className="w-full min-h-[6.25rem] flex flex-row flex-wrap justify-between items-center shadow-md p-[1.25rem] / 1470:flex-col">
@@ -36,7 +38,7 @@ const Header = () => {
           <Link
             to="/cursos"
             className={
-              pathname === '/cursos' ? 'menu-item active' : 'menu-item'
+              pathname.startsWith('/cursos') ? 'menu-item active' : 'menu-item'
             }
           >
             Cursos
